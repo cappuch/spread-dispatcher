@@ -1,0 +1,1080 @@
+{
+ "meta": {
+  "seeds": [
+   "fp-1",
+   "fp-2"
+  ],
+  "level": 8,
+  "scheduleSpec": {
+   "openMult": 0.5,
+   "riseMult": 0.05,
+   "stepMinutes": 15,
+   "steps": 31,
+   "capMult": 2.0
+  },
+  "orders": 1697,
+  "cars": 1729,
+  "gigs": 2500,
+  "bookedGigs": 1676,
+  "bookedCars": 1676
+ },
+ "runs": [
+  {
+   "seed": "fp-1",
+   "worldId": "w68bb8e2b9f5a8d880f79",
+   "ordersWon": 861,
+   "carsPosted": 873,
+   "gigsPosted": 1306,
+   "bookings": 831,
+   "bookRatePerCar": 0.952,
+   "bookRatePerGig": 0.636,
+   "score": {
+    "marginCents": -7889261,
+    "revenueCents": 5946500,
+    "marginShare": -1.3267066341545446,
+    "wonOrders": 846,
+    "onTimeShare": 0.44799054373522457,
+    "undeliveredShare": 0.1536643026004728,
+    "ranked": false
+   }
+  },
+  {
+   "seed": "fp-2",
+   "worldId": "w693bc5489bb595b7cad4",
+   "ordersWon": 836,
+   "carsPosted": 856,
+   "gigsPosted": 1194,
+   "bookings": 845,
+   "bookRatePerCar": 0.987,
+   "bookRatePerGig": 0.708,
+   "score": {
+    "marginCents": -6217096,
+    "revenueCents": 6059800,
+    "marginShare": -1.0259572923198785,
+    "wonOrders": 830,
+    "onTimeShare": 0.6240963855421687,
+    "undeliveredShare": 0.0855421686746988,
+    "ranked": false
+   }
+  }
+ ],
+ "overall": {
+  "n": 1676,
+  "mean": 1.6703,
+  "p25": 1.3001,
+  "median": 2.0,
+  "p75": 2.0,
+  "p90": 2.0,
+  "min": 0.5,
+  "max": 2.0
+ },
+ "byRoadMinutes": {
+  "120-180": {
+   "n": 246,
+   "mean": 1.6551,
+   "p25": 1.3,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "<60": {
+   "n": 431,
+   "mean": 1.6962,
+   "p25": 1.4001,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5001,
+   "max": 2.0
+  },
+  "180-300": {
+   "n": 269,
+   "mean": 1.5877,
+   "p25": 1.05,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.55,
+   "max": 2.0
+  },
+  "60-120": {
+   "n": 464,
+   "mean": 1.6152,
+   "p25": 1.1375,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "300+": {
+   "n": 266,
+   "mean": 1.8218,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.65,
+   "max": 2.0
+  }
+ },
+ "bookRateByRoadMinutes": {
+  "<60": {
+   "cars": 441,
+   "booked": 431,
+   "bookRate": 0.977,
+   "meanRatio": 1.6962
+  },
+  "60-120": {
+   "cars": 469,
+   "booked": 464,
+   "bookRate": 0.989,
+   "meanRatio": 1.6152
+  },
+  "120-180": {
+   "cars": 253,
+   "booked": 246,
+   "bookRate": 0.972,
+   "meanRatio": 1.6551
+  },
+  "180-300": {
+   "cars": 280,
+   "booked": 269,
+   "bookRate": 0.961,
+   "meanRatio": 1.5877
+  },
+  "300+": {
+   "cars": 286,
+   "booked": 266,
+   "bookRate": 0.93,
+   "meanRatio": 1.8218
+  }
+ },
+ "byLeadTime": {
+  ">24h": {
+   "n": 311,
+   "mean": 1.659,
+   "p25": 1.2001,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "2-6h": {
+   "n": 262,
+   "mean": 1.9456,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.6,
+   "max": 2.0
+  },
+  "<2h": {
+   "n": 177,
+   "mean": 1.811,
+   "p25": 1.65,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.6001,
+   "max": 2.0
+  },
+  "6-24h": {
+   "n": 750,
+   "mean": 1.5977,
+   "p25": 1.1001,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  }
+ },
+ "byHourOfDay": {
+  "10": {
+   "n": 86,
+   "mean": 1.6797,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "11": {
+   "n": 67,
+   "mean": 1.6358,
+   "p25": 0.925,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5999,
+   "max": 2.0
+  },
+  "9": {
+   "n": 82,
+   "mean": 1.9665,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.6001,
+   "max": 2.0
+  },
+  "13": {
+   "n": 71,
+   "mean": 1.2627,
+   "p25": 0.8,
+   "median": 1.0499,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.6,
+   "max": 2.0
+  },
+  "15": {
+   "n": 87,
+   "mean": 1.3063,
+   "p25": 0.925,
+   "median": 1.2,
+   "p75": 1.6999,
+   "p90": 2.0,
+   "min": 0.5499,
+   "max": 2.0
+  },
+  "12": {
+   "n": 83,
+   "mean": 1.3199,
+   "p25": 0.85,
+   "median": 1.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "14": {
+   "n": 86,
+   "mean": 1.3901,
+   "p25": 0.8998,
+   "median": 1.3249,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.6499,
+   "max": 2.0
+  },
+  "16": {
+   "n": 102,
+   "mean": 1.4147,
+   "p25": 1.0499,
+   "median": 1.4,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5499,
+   "max": 2.0
+  },
+  "7": {
+   "n": 169,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "21": {
+   "n": 44,
+   "mean": 1.7091,
+   "p25": 1.4001,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5001,
+   "max": 2.0
+  },
+  "19": {
+   "n": 130,
+   "mean": 1.6362,
+   "p25": 1.3625,
+   "median": 1.8251,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.7501,
+   "max": 2.0
+  },
+  "18": {
+   "n": 181,
+   "mean": 1.6293,
+   "p25": 1.3001,
+   "median": 1.75,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.55,
+   "max": 2.0
+  },
+  "6": {
+   "n": 92,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "17": {
+   "n": 84,
+   "mean": 1.4339,
+   "p25": 1.05,
+   "median": 1.4,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "20": {
+   "n": 107,
+   "mean": 1.757,
+   "p25": 1.55,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.75,
+   "max": 2.0
+  },
+  "8": {
+   "n": 103,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "0": {
+   "n": 21,
+   "mean": 1.9381,
+   "p25": 1.95,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 1.45,
+   "max": 2.0
+  },
+  "3": {
+   "n": 3,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "22": {
+   "n": 35,
+   "mean": 1.66,
+   "p25": 1.3999,
+   "median": 1.9,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.7501,
+   "max": 2.0
+  },
+  "23": {
+   "n": 16,
+   "mean": 1.8312,
+   "p25": 1.6875,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.85,
+   "max": 2.0
+  },
+  "5": {
+   "n": 10,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "1": {
+   "n": 11,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "4": {
+   "n": 3,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  },
+  "2": {
+   "n": 3,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  }
+ },
+ "byOption": {
+  "same_day": {
+   "n": 991,
+   "mean": 1.5964,
+   "p25": 1.15,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "next_day": {
+   "n": 683,
+   "mean": 1.7764,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 0.5,
+   "max": 2.0
+  },
+  "within_3_days": {
+   "n": 2,
+   "mean": 2.0,
+   "p25": 2.0,
+   "median": 2.0,
+   "p75": 2.0,
+   "p90": 2.0,
+   "min": 2.0,
+   "max": 2.0
+  }
+ },
+ "steps": {
+  "bookingStepCounts": {
+   "0": 6,
+   "1": 9,
+   "2": 18,
+   "3": 21,
+   "4": 18,
+   "5": 25,
+   "6": 35,
+   "7": 44,
+   "8": 36,
+   "9": 38,
+   "10": 27,
+   "11": 37,
+   "12": 29,
+   "13": 16,
+   "14": 27,
+   "15": 15,
+   "16": 25,
+   "17": 19,
+   "18": 31,
+   "19": 33,
+   "20": 22,
+   "21": 21,
+   "22": 14,
+   "23": 28,
+   "24": 15,
+   "25": 10,
+   "26": 12,
+   "27": 15,
+   "28": 11,
+   "29": 8,
+   "30": 1011
+  },
+  "firstFeeBookings": 6,
+  "firstFeeShareOfBookings": 0.004,
+  "firstFeeShareOfCars": 0.003,
+  "meanBookingStep": 23.41,
+  "noBookRatePerCar": 0.031,
+  "noBookRatePerGig": 0.33,
+  "gigsPosted": 2500,
+  "gigsBooked": 1676,
+  "carsPosted": 1729,
+  "carsBooked": 1676,
+  "stepFeeRatio": {
+   "0": 0.5,
+   "1": 0.55,
+   "2": 0.6,
+   "3": 0.65,
+   "4": 0.7,
+   "5": 0.75,
+   "6": 0.8,
+   "7": 0.85,
+   "8": 0.9,
+   "9": 0.95,
+   "10": 1.0,
+   "11": 1.05,
+   "12": 1.1,
+   "13": 1.15,
+   "14": 1.2,
+   "15": 1.25,
+   "16": 1.3,
+   "17": 1.35,
+   "18": 1.4,
+   "19": 1.45,
+   "20": 1.5,
+   "21": 1.55,
+   "22": 1.6,
+   "23": 1.65,
+   "24": 1.7,
+   "25": 1.75,
+   "26": 1.8,
+   "27": 1.85,
+   "28": 1.9,
+   "29": 1.95,
+   "30": 2.0
+  },
+  "cumulativeShare": {
+   "0": 0.004,
+   "1": 0.009,
+   "2": 0.02,
+   "3": 0.032,
+   "4": 0.043,
+   "5": 0.058,
+   "6": 0.079,
+   "7": 0.105,
+   "8": 0.126,
+   "9": 0.149,
+   "10": 0.165,
+   "11": 0.187,
+   "12": 0.205,
+   "13": 0.214,
+   "14": 0.23,
+   "15": 0.239,
+   "16": 0.254,
+   "17": 0.266,
+   "18": 0.284,
+   "19": 0.304,
+   "20": 0.317,
+   "21": 0.329,
+   "22": 0.338,
+   "23": 0.354,
+   "24": 0.363,
+   "25": 0.369,
+   "26": 0.376,
+   "27": 0.385,
+   "28": 0.392,
+   "29": 0.397,
+   "30": 1.0
+  }
+ },
+ "lanes": {
+  "destinations": [
+   {
+    "placeId": "hyvinkaa",
+    "name": "Hyvink\u00e4\u00e4",
+    "cars": 165,
+    "booked": 158,
+    "bookRate": 0.958,
+    "meanRatio": 1.704,
+    "density": 35
+   },
+   {
+    "placeId": "vantaa",
+    "name": "Vantaa",
+    "cars": 161,
+    "booked": 156,
+    "bookRate": 0.969,
+    "meanRatio": 1.669,
+    "density": 105
+   },
+   {
+    "placeId": "espoo",
+    "name": "Espoo",
+    "cars": 143,
+    "booked": 142,
+    "bookRate": 0.993,
+    "meanRatio": 1.601,
+    "density": 213
+   },
+   {
+    "placeId": "oulu",
+    "name": "Oulu",
+    "cars": 125,
+    "booked": 113,
+    "bookRate": 0.904,
+    "meanRatio": 1.895,
+    "density": 167
+   },
+   {
+    "placeId": "tampere",
+    "name": "Tampere",
+    "cars": 117,
+    "booked": 115,
+    "bookRate": 0.983,
+    "meanRatio": 1.597,
+    "density": 73
+   },
+   {
+    "placeId": "helsinki",
+    "name": "Helsinki",
+    "cars": 96,
+    "booked": 93,
+    "bookRate": 0.969,
+    "meanRatio": 1.623,
+    "density": 479
+   },
+   {
+    "placeId": "turku",
+    "name": "Turku",
+    "cars": 94,
+    "booked": 92,
+    "bookRate": 0.979,
+    "meanRatio": 1.662,
+    "density": 171
+   },
+   {
+    "placeId": "lahti",
+    "name": "Lahti",
+    "cars": 91,
+    "booked": 91,
+    "bookRate": 1.0,
+    "meanRatio": 1.664,
+    "density": 22
+   },
+   {
+    "placeId": "lempaala",
+    "name": "Lemp\u00e4\u00e4l\u00e4",
+    "cars": 82,
+    "booked": 79,
+    "bookRate": 0.963,
+    "meanRatio": 1.597,
+    "density": 2
+   },
+   {
+    "placeId": "pori",
+    "name": "Pori",
+    "cars": 78,
+    "booked": 78,
+    "bookRate": 1.0,
+    "meanRatio": 1.64,
+    "density": 5
+   },
+   {
+    "placeId": "jyvaskyla",
+    "name": "Jyv\u00e4skyl\u00e4",
+    "cars": 75,
+    "booked": 71,
+    "bookRate": 0.947,
+    "meanRatio": 1.661,
+    "density": 12
+   },
+   {
+    "placeId": "raisio",
+    "name": "Raisio",
+    "cars": 68,
+    "booked": 67,
+    "bookRate": 0.985,
+    "meanRatio": 1.573,
+    "density": 4
+   },
+   {
+    "placeId": "kuopio",
+    "name": "Kuopio",
+    "cars": 66,
+    "booked": 64,
+    "bookRate": 0.97,
+    "meanRatio": 1.552,
+    "density": 59
+   },
+   {
+    "placeId": "mikkeli",
+    "name": "Mikkeli",
+    "cars": 50,
+    "booked": 48,
+    "bookRate": 0.96,
+    "meanRatio": 1.696,
+    "density": 29
+   },
+   {
+    "placeId": "porvoo",
+    "name": "Porvoo",
+    "cars": 43,
+    "booked": 42,
+    "bookRate": 0.977,
+    "meanRatio": 1.712,
+    "density": 4
+   },
+   {
+    "placeId": "rovaniemi",
+    "name": "Rovaniemi",
+    "cars": 40,
+    "booked": 38,
+    "bookRate": 0.95,
+    "meanRatio": 1.878,
+    "density": 8
+   },
+   {
+    "placeId": "ylivieska",
+    "name": "Ylivieska",
+    "cars": 40,
+    "booked": 39,
+    "bookRate": 0.975,
+    "meanRatio": 1.628,
+    "density": 1
+   },
+   {
+    "placeId": "vaasa",
+    "name": "Vaasa",
+    "cars": 36,
+    "booked": 35,
+    "bookRate": 0.972,
+    "meanRatio": 1.653,
+    "density": 39
+   },
+   {
+    "placeId": "salo",
+    "name": "Salo",
+    "cars": 32,
+    "booked": 32,
+    "bookRate": 1.0,
+    "meanRatio": 1.695,
+    "density": 0
+   },
+   {
+    "placeId": "lappeenranta",
+    "name": "Lappeenranta",
+    "cars": 27,
+    "booked": 27,
+    "bookRate": 1.0,
+    "meanRatio": 1.613,
+    "density": 10
+   }
+  ],
+  "origins": [
+   {
+    "placeId": "hyvinkaa",
+    "name": "Hyvink\u00e4\u00e4",
+    "cars": 359,
+    "booked": 350,
+    "bookRate": 0.975,
+    "meanRatio": 1.646,
+    "density": 35
+   },
+   {
+    "placeId": "vantaa",
+    "name": "Vantaa",
+    "cars": 329,
+    "booked": 317,
+    "bookRate": 0.964,
+    "meanRatio": 1.703,
+    "density": 105
+   },
+   {
+    "placeId": "espoo",
+    "name": "Espoo",
+    "cars": 127,
+    "booked": 125,
+    "bookRate": 0.984,
+    "meanRatio": 1.72,
+    "density": 213
+   },
+   {
+    "placeId": "jyvaskyla",
+    "name": "Jyv\u00e4skyl\u00e4",
+    "cars": 119,
+    "booked": 117,
+    "bookRate": 0.983,
+    "meanRatio": 1.564,
+    "density": 12
+   },
+   {
+    "placeId": "helsinki",
+    "name": "Helsinki",
+    "cars": 115,
+    "booked": 112,
+    "bookRate": 0.974,
+    "meanRatio": 1.746,
+    "density": 479
+   },
+   {
+    "placeId": "raisio",
+    "name": "Raisio",
+    "cars": 87,
+    "booked": 84,
+    "bookRate": 0.966,
+    "meanRatio": 1.68,
+    "density": 4
+   },
+   {
+    "placeId": "tampere",
+    "name": "Tampere",
+    "cars": 86,
+    "booked": 82,
+    "bookRate": 0.953,
+    "meanRatio": 1.696,
+    "density": 73
+   },
+   {
+    "placeId": "lahti",
+    "name": "Lahti",
+    "cars": 79,
+    "booked": 78,
+    "bookRate": 0.987,
+    "meanRatio": 1.663,
+    "density": 22
+   },
+   {
+    "placeId": "oulu",
+    "name": "Oulu",
+    "cars": 79,
+    "booked": 75,
+    "bookRate": 0.949,
+    "meanRatio": 1.712,
+    "density": 167
+   },
+   {
+    "placeId": "lempaala",
+    "name": "Lemp\u00e4\u00e4l\u00e4",
+    "cars": 62,
+    "booked": 62,
+    "bookRate": 1.0,
+    "meanRatio": 1.726,
+    "density": 2
+   },
+   {
+    "placeId": "porvoo",
+    "name": "Porvoo",
+    "cars": 49,
+    "booked": 47,
+    "bookRate": 0.959,
+    "meanRatio": 1.606,
+    "density": 4
+   },
+   {
+    "placeId": "vaasa",
+    "name": "Vaasa",
+    "cars": 30,
+    "booked": 30,
+    "bookRate": 1.0,
+    "meanRatio": 1.52,
+    "density": 39
+   },
+   {
+    "placeId": "turku",
+    "name": "Turku",
+    "cars": 27,
+    "booked": 25,
+    "bookRate": 0.926,
+    "meanRatio": 1.606,
+    "density": 171
+   },
+   {
+    "placeId": "kuopio",
+    "name": "Kuopio",
+    "cars": 24,
+    "booked": 22,
+    "bookRate": 0.917,
+    "meanRatio": 1.609,
+    "density": 59
+   },
+   {
+    "placeId": "pori",
+    "name": "Pori",
+    "cars": 19,
+    "booked": 19,
+    "bookRate": 1.0,
+    "meanRatio": 1.655,
+    "density": 5
+   },
+   {
+    "placeId": "mikkeli",
+    "name": "Mikkeli",
+    "cars": 17,
+    "booked": 15,
+    "bookRate": 0.882,
+    "meanRatio": 1.607,
+    "density": 29
+   },
+   {
+    "placeId": "kokkola",
+    "name": "Kokkola",
+    "cars": 16,
+    "booked": 15,
+    "bookRate": 0.938,
+    "meanRatio": 1.693,
+    "density": 4
+   },
+   {
+    "placeId": "rovaniemi",
+    "name": "Rovaniemi",
+    "cars": 15,
+    "booked": 15,
+    "bookRate": 1.0,
+    "meanRatio": 1.737,
+    "density": 8
+   },
+   {
+    "placeId": "ylivieska",
+    "name": "Ylivieska",
+    "cars": 14,
+    "booked": 13,
+    "bookRate": 0.929,
+    "meanRatio": 1.565,
+    "density": 1
+   },
+   {
+    "placeId": "salo",
+    "name": "Salo",
+    "cars": 13,
+    "booked": 12,
+    "bookRate": 0.923,
+    "meanRatio": 1.721,
+    "density": 0
+   }
+  ],
+  "correlations": {
+   "ratio_vs_destDensity": -0.011,
+   "ratio_vs_origDensity": 0.065,
+   "ratio_vs_roadMinutes": 0.098,
+   "ratio_vs_leadMinutes": -0.298,
+   "ratio_vs_destDensity_spearman": 0.005,
+   "bookRate_vs_destDensity": -0.012,
+   "laneSpread_origin": 0.226,
+   "laneSpread_destination": 0.343
+  },
+  "driverDensity": {
+   "places": 28,
+   "meanPerPlace": 54.43,
+   "top": [
+    [
+     "helsinki",
+     479
+    ],
+    [
+     "espoo",
+     213
+    ],
+    [
+     "turku",
+     171
+    ],
+    [
+     "oulu",
+     167
+    ],
+    [
+     "vantaa",
+     105
+    ],
+    [
+     "tampere",
+     73
+    ],
+    [
+     "kuopio",
+     59
+    ],
+    [
+     "vaasa",
+     39
+    ],
+    [
+     "hyvinkaa",
+     35
+    ],
+    [
+     "seinajoki",
+     33
+    ]
+   ]
+  }
+ },
+ "recommendation": {
+  "model": "required-fee replay: each car's accepted fee in the probe (the fee at which it booked) is replayed against each car's actual first-posting lifetime; a candidate books the car at the first 15-min step whose fee reaches that level. Cars that never booked are censored at 2.0 and are not booked by any candidate.",
+  "observedSchedule": {
+   "openMult": 0.5,
+   "rise15": 0.05,
+   "bookRate": 0.725,
+   "meanFeeRatio": 1.628
+  },
+  "firstPosting": {
+   "carsPosted": 1729,
+   "carsBooked": 1218,
+   "rate": 0.704
+  },
+  "requiredFeeCdf": {
+   "0.6": 0.014,
+   "0.8": 0.071,
+   "1.0": 0.16,
+   "1.2": 0.218,
+   "1.4": 0.267,
+   "1.6": 0.321,
+   "1.8": 0.361,
+   "1.9": 0.377,
+   "2.0": 0.969
+  },
+  "recommended": {
+   "openMult": 0.55,
+   "rise15": 0.05,
+   "risePerHour": 0.2,
+   "bookRate": 0.744,
+   "meanFeeRatio": 1.627
+  },
+  "frontier": [
+   {
+    "openMult": 0.6,
+    "rise15": 0.05,
+    "risePerHour": 0.2,
+    "bookRate": 0.753,
+    "meanFeeRatio": 1.625
+   },
+   {
+    "openMult": 0.8,
+    "rise15": 0.05,
+    "risePerHour": 0.2,
+    "bookRate": 0.784,
+    "meanFeeRatio": 1.631
+   },
+   {
+    "openMult": 0.55,
+    "rise15": 0.1,
+    "risePerHour": 0.4,
+    "bookRate": 0.846,
+    "meanFeeRatio": 1.659
+   },
+   {
+    "openMult": 0.65,
+    "rise15": 0.15,
+    "risePerHour": 0.6,
+    "bookRate": 0.883,
+    "meanFeeRatio": 1.676
+   }
+  ],
+  "caveat": "Right-censoring dominates: 61% of all bookings happened at the 2.0 cap, so the fee a car would accept below/above 2.0 is not identified; the accepted fee used here is an upper bound on the car's threshold (drivers wait for raises). Gigs that never booked are censored beyond 2.0. A steeper rise also changes how long drivers wait, which this replay does not model."
+ },
+ "lateness": {
+  "carsDelivered": 1500,
+  "carsWon": 1729,
+  "onTimeShare": 0.609,
+  "medianLatenessMin": -83.0
+ },
+ "notes": [
+  "Tested schedule 0.50+0.05/15min (cap 2.0): 1676/2500 posted gigs booked (67%), 1676/1729 cars (97%); booked fee/reference mean 1.67, median 2.00.",
+  "Only 6 bookings (0.36%) happened at the opening fee; 1011 (60%) happened at the 2.0 cap, which is the dominant censoring point: above 2.0 was never tested.",
+  "First-posting conversion 1218/1729 = 70%; the rest needed a repost (window-free) before a driver booked.",
+  "Booked fee/reference is essentially flat across lanes and driver density (r=-0.011 vs destination density, r=0.098 vs road minutes): referenceFeeCents already absorbs lane difficulty.",
+  "Recommended: open 0.55 x ref, +0.05 x ref/15min (+0.20/h), cap 2.0 -> replay book rate 74%, mean fee 1.63 x ref."
+ ]
+}
