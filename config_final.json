@@ -7,7 +7,7 @@
   "calibrate": false,
   "adapt": false,
   "trust_relax": false,
-  "hard_guard": true,
+  "hard_guard": false,
   "sel_origin_min": 20,
   "sel_sup_min": 20,
   "sel_long_min": 180,
@@ -29,5 +29,6 @@
   "combine_max_cars": 3,
   "merge_existing": false,
   "deliver_buffer": 60,
-  "war_guard": true
+  "war_guard": true,
+  "sel_min_list": 0
 }

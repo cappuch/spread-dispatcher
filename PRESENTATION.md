@@ -3,7 +3,9 @@
 ## 1. Result
 Level-8 practice worlds, our final policy: **€5.3k–€8.6k margin per week**, **94.6–98.3% on time**,
 all ranked, on `tune-a..d` and `study-1`. Starter on the same level: about **−€72k**.
-Our first ranking run: **€4,183, 172 orders, 97.7% on time**. House best on that world: **€16,371, 465 orders, 93.3%**.
+Ranking round 3: **€22,903 over five worlds**, but one world finished at 87.4% on time, so the round was not ranked.
+Round 4 with the added fee escalation: **€34,003 over five worlds, all five ranked, 95.0–96.6% on time** (place 7 of 7 ranked teams in that round).
+Best single world: **€8,823, 266 orders, 97.4% on time**. House best averaged **€14,358 per world** in round 4; our average was **€6,801**.
 
 ## 2. Win fewer, better cars
 We do not win every request. We quote `k = 1.34 × list` for each option (next_day −0.05,
@@ -16,7 +18,9 @@ The 1.34 prior is measured: 1,510 clean level-8 quotes, four worlds, 50% dealer 
 A request is declined when `ref/list > 1.05`, the pickup town has <20 drivers within 30 minutes,
 the lane is long into a thin destination, a private stop is in a thin town, or a >€200 lane has
 <12h of lead. A per-pickup-town daily win cap stops us from flooding a region.
-A hard brake stops new wins when observed on-time falls below 92% — 90% is the ranking cliff.
+Delivery risk is handled with money, not refusal: after 30 deliveries, an observed on-time share
+below 94% raises every new fee 15%; below 90% raises it 30%. A hard win stop at 88% remains only
+as a last resort off by default.
 
 ## 4. Flat fee, private escalation
 Drivers learn raises. The starter's 1.0→1.5× ref ramp booked **0.4%** of gigs at the opening fee

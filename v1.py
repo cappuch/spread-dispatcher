@@ -61,6 +61,7 @@ class V1Policy:
         self.probe_k={}
         self.probe_rows=[]
         self.probe_done=False
+        self.fee_boost=1.0
         self.cur_day=-1
         self.day_res=[]
     def _day_record(self, k_eff, won, desk):
@@ -143,6 +144,7 @@ class V1Policy:
         reasons=[]
         if len(legs)==1:
             L=req['options'][0]['listPriceCents']; r=req['referenceFeeCents']/max(1,L)
+            if self.p.sel_min_list and L<self.p.sel_min_list: decline=True; reasons.append('cheap')
             if r>1.05: decline=True; reasons.append('r')
             if sup<20 and minutes>240: decline=True; reasons.append('remote')
             if legs[0]['car']['premium'] and r>0.75: decline=True; reasons.append('premium')
@@ -156,14 +158,11 @@ class V1Policy:
             if r>1.0: decline=True; reasons.append('r2')
             fee=self.expected_fee(req,a,b)*1.05
             if th*L-fee<=0: decline=True; reasons.append('e0')
-        # hard delivery-minimum brake
-        if self.p.hard_guard and desk.checked>=50:
+        # delivery risk: pay drivers more instead of refusing cars
+        if desk.checked>=30:
             overdue=sum(1 for o in desk.orders.values() if o['deadline']<desk.now and any(x is None for x in o['deliveredAt']))
             rate=desk.on_time_ok/max(1,desk.checked+overdue)
-            safe = (sup>=80 and (min(o['deadline'] for o in req['options'])-desk.now)>=12*HOUR and not any(l['pickup']['privateAddress'] or l['delivery']['privateAddress'] for l in legs) and max(o['listPriceCents'] for o in req['options'])<=20000)
-            if rate<0.90 or (rate<0.92 and not safe):
-                self.stats['decline_hard_guard']+=1
-                return {o['kind']:max(1,int(round(o['listPriceCents']*2.6))) for o in req['options']}
+            self.fee_boost = 1.30 if rate<0.90 else 1.15 if rate<0.94 else 1.0
         # note deadline / ready
         nc=self.nc(req)
         nd=nc.get('deadline_override') or nc.get('delivery_before')
@@ -178,8 +177,8 @@ class V1Policy:
         if self.p.guard and desk.checked>=40:
             overdue=sum(1 for o in desk.orders.values() if o['deadline']<desk.now and any(x is None for x in o['deliveredAt']))
             rate=desk.on_time_ok/max(1,desk.checked+overdue)
-            if rate<0.90: strict=1.6
-            elif rate<0.95: strict=1.0+(0.95-rate)*10
+            if rate<0.90: strict=1.20
+            elif rate<0.95: strict=1.0+(0.95-rate)*4
             elif rate>=0.975: strict=max(0.82,1.0-(rate-0.975)*6)
         if self.p.trust_relax and desk.trust.get(req['dealerId'],0)>=18: strict*=0.78
         origin_min=max(8,int(self.p.sel_origin_min*strict))
@@ -274,9 +273,9 @@ class V1Policy:
         return max(1,int(round(base)))
     def fees(self, desk, order, cars):
         req=desk.requests[order['id']]
-        base=int(self.f0(req,cars)*self.p.fee_scale)
+        base=int(self.f0(req,cars)*self.p.fee_scale*self.fee_boost)
         if max(o['listPriceCents'] for o in req['options'])>20000: base=int(base*1.10)
-        cap=int(req['referenceFeeCents']*1.25*cars/len(order['legs']))
+        cap=int(req['referenceFeeCents']*1.25*cars/len(order['legs'])*self.fee_boost)
         base=min(base,cap)
         T=order['lastPickupAt']-desk.now
         ref_car=req['referenceFeeCents']*cars/len(order['legs'])
@@ -653,7 +652,7 @@ class V1Desk(Desk):
         aud={'experienced':any(c['premium'] for c in cands),'manualLicence':any(c.get('manual') for c in cands)}
         same_pickup=len({c['pickup']['placeId'] for c in cands})==1
         disc=self.policy.p.group_discount_batch if same_pickup else self.policy.p.group_discount
-        base=ref*disc*self.policy.m0(self.requests[first['id']])
+        base=ref*disc*self.policy.m0(self.requests[first['id']])*self.policy.fee_boost
         base=max(1,int(round(base)))
         deadline=min(self.orders[c['orderId']]['deadline'] for c in cands)
         T=deadline-self.now
